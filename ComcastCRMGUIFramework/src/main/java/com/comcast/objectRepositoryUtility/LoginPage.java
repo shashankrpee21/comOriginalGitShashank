@@ -37,10 +37,7 @@ public class LoginPage extends WebDriverUtility{
 		return loginBtn;
 	}
 
-	public void loginToApp(String Url, String Username, String Password) {
-		implicitlyWait(driver);
-		driver.get(Url);
-		maximizeWindow(driver);
+	public void loginToApp(String Username, String Password) {
 		username.sendKeys(Username);
 		password.sendKeys(Password);
 		loginBtn.click();

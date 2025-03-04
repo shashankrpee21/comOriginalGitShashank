@@ -77,7 +77,6 @@ public class BaseClass {
 		}
 		//storing the sessionID into staticDriver which will be used in ListenerImlementationClass-> OnFailureTest() or OnFinishTest()
 		staticDriver = driver;
-		
 		//
 		UtilityClassObject.setDriver(driver);
 		
@@ -97,14 +96,19 @@ public class BaseClass {
 		String Password = System.getProperty("password", flib.getDataFromPropertiesFile("password"));
 		
 		LoginPage lp = new LoginPage(driver);
-		lp.loginToApp(Url, Username, Password);
+		wlib.implicitlyWait(driver);
+		driver.get(Url);
+		wlib.maximizeWindow(driver);
+		lp.loginToApp(Username, Password);
+		lp.getLogin().click();
 	}
 
 	@AfterMethod(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
 	public void ConfigAM() {
 		Reporter.log("=====Logout to Appl=====", true);
 		HomePage hp = new HomePage(driver);
-		hp.adminLogout();
+		hp.getAdminBtn().click();
+		hp.getAdminLogoutBtn().click();
 	}
 
 	@AfterClass(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
