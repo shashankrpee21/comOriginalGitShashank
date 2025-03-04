@@ -7,23 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<profiles>
-		<profile>
-			<id>ST</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.5.2</version>
-						<configuration>
-							<suiteXmlFiles>
-								<suiteXmlFile>suite_smokeTest.xml</suiteXmlFile>
-							</suiteXmlFiles>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
 
 		<profile>
 			<id>FRT</id>
@@ -36,6 +19,24 @@
 						<configuration>
 							<suiteXmlFiles>
 								<suiteXmlFile>suite_fullregressionTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>PDT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>suite_parallel_distributesTest.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -60,6 +61,61 @@
 				</plugins>
 			</build>
 		</profile>
+		
+		<profile>
+			<id>RT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>suite_regressionTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>SRT</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>suite_smoke_n_regressionTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>ST</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>suite_smokeTest.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
 	</profiles>
 
 	<dependencies>
