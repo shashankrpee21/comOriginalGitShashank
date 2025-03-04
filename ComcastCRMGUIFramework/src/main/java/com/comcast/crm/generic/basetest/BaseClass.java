@@ -34,38 +34,25 @@ public class BaseClass {
 
 	public WebDriver driver = null;
 	public static WebDriver staticDriver = null;
-
-	@BeforeSuite(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
+	
+	
+	@BeforeSuite(alwaysRun = true)
 	public void configBS() throws SQLException {
 		Reporter.log("=====Connect to DB and Report Config=====", true);
 		dblib.getDBconnection();
 	}
 
-// Only Use @parameter for Cross Browser testing	
 //	@Parameters("Browser")
 //	@BeforeClass(groups = {"smokeTest","regressionTest"})
 //	public void configBC(String browser) throws Throwable {
 //	String Browser = browser;
 
-	@BeforeClass(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
+	@BeforeClass(alwaysRun = true)
 	public void configBC() throws Throwable {
-		
-		
+	
 		Reporter.log("=====Launch Browse=====", true);
-//		commented the below line because receiving the Data from CMD line instead of properties file
-//		String Browser = flib.getDataFromPropertiesFile("browser");
-		
-//		It will receive the data from CMD line  - "browser", If user forgot 
-//		to give the data, it will be received from properties file - "flib.getDataFromPropertiesFile("browser")" by default	
 		String Browser = System.getProperty("browser", flib.getDataFromPropertiesFile("browser"));
 
-//		ChromeOptions option1 = new ChromeOptions();
-//		//option.addArguments("--headless");
-//		option1.addArguments("--Incognito");
-		
-//		FirefoxOptions option2 = new FirefoxOptions();
-//		option2.addArguments("-private");
-		
 		if (Browser.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (Browser.equals("firefox")) {
@@ -75,22 +62,15 @@ public class BaseClass {
 		} else {
 			Reporter.log("Browser not recognised --- Shashank");
 		}
-		//storing the sessionID into staticDriver which will be used in ListenerImlementationClass-> OnFailureTest() or OnFinishTest()
 		staticDriver = driver;
-		//
 		UtilityClassObject.setDriver(driver);
 		
 	}
 
-	@BeforeMethod(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
+	
+	@BeforeMethod(alwaysRun = true)
 	public void configBM() throws Throwable {
 		Reporter.log("=====Login to Appl=====", true);
-//		String Url = flib.getDataFromPropertiesFile("url");
-//		String Username = flib.getDataFromPropertiesFile("username");
-//		String Password = flib.getDataFromPropertiesFile("password");
-
-//		It will receive the data from CMD line  - "url, Un, Pwd", If user forgot 
-//		to give the data, it will be received from properties file - "flib.getDataFromPropertiesFile("url, un, pwd"));" by default			
 		String Url = System.getProperty("url", flib.getDataFromPropertiesFile("url"));
 		String Username = System.getProperty("username", flib.getDataFromPropertiesFile("username"));
 		String Password = System.getProperty("password", flib.getDataFromPropertiesFile("password"));
@@ -103,7 +83,8 @@ public class BaseClass {
 		lp.getLogin().click();
 	}
 
-	@AfterMethod(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
+	
+	@AfterMethod(alwaysRun = true)
 	public void ConfigAM() {
 		Reporter.log("=====Logout to Appl=====", true);
 		HomePage hp = new HomePage(driver);
@@ -111,14 +92,15 @@ public class BaseClass {
 		hp.getAdminLogoutBtn().click();
 	}
 
-	@AfterClass(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
+	
+	@AfterClass(alwaysRun = true)
 	public void ConfigAC() {
 		Reporter.log("=====Close Browser=====", true);
 		driver.quit();
-
 	}
 
-	@AfterSuite(alwaysRun = true) //(groups = {"smokeTest","regressionTest"})
+	
+	@AfterSuite(alwaysRun = true)
 	public void ConfigAs() throws SQLException {
 		Reporter.log("=====Close DB, Report BackUp=====", true);
 		dblib.closeDBConnection();

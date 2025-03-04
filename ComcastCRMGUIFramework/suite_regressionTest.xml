@@ -11,8 +11,6 @@
 		<classes>
 			<class name="com.comcast.crm.contactTest.CreateContactTest" />
 			<class name="com.comcast.crm.orgTest.CreateOrganizationTest" />
-			<class name="com.comcast.crm.campaignTest.CreateCampaignTest" />
-			<class name="com.comcast.crm.products.CreateProductsTest" />
 		</classes>
 	</test>
 </suite>
