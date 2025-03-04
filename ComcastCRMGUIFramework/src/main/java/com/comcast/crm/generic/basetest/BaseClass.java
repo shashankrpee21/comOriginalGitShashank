@@ -76,11 +76,15 @@ public class BaseClass {
 		String Password = System.getProperty("password", flib.getDataFromPropertiesFile("password"));
 		
 		LoginPage lp = new LoginPage(driver);
-		wlib.implicitlyWait(driver);
-		driver.get(Url);
-		wlib.maximizeWindow(driver);
-		lp.loginToApp(Username, Password);
-		lp.getLogin().click();
+//		wlib.implicitlyWait(driver);
+//		driver.get(Url);
+//		wlib.maximizeWindow(driver);
+//		lp.loginToApp1(Username, Password);
+//		lp.getLogin().click();
+		
+		lp.loginToApp1(Url, Username, Password);
+		
+		
 	}
 
 	

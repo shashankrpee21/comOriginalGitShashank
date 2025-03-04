@@ -37,7 +37,16 @@ public class LoginPage extends WebDriverUtility{
 		return loginBtn;
 	}
 
-	public void loginToApp(String Username, String Password) {
+	public void loginToApp1(String Url, String Username, String Password) {
+		implicitlyWait(driver);
+		driver.get(Url);
+		maximizeWindow(driver);
+		username.sendKeys(Username);
+		password.sendKeys(Password);
+		loginBtn.click();
+	}
+	
+	public void loginToApp2(String Username, String Password) {
 		username.sendKeys(Username);
 		password.sendKeys(Password);
 		loginBtn.click();
