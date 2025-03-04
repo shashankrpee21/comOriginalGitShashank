@@ -49,8 +49,7 @@ public class BaseClass {
 
 	@BeforeClass(alwaysRun = true)
 	public void configBC() throws Throwable {
-	
-		Reporter.log("=====Launch Browse=====", true);
+		
 		String Browser = System.getProperty("browser", flib.getDataFromPropertiesFile("browser"));
 
 		if (Browser.equals("chrome")) {
@@ -64,13 +63,13 @@ public class BaseClass {
 		}
 		staticDriver = driver;
 		UtilityClassObject.setDriver(driver);
-		
+		Reporter.log("=====Launch Browse=====", true);
 	}
 
 	
 	@BeforeMethod(alwaysRun = true)
 	public void configBM() throws Throwable {
-		Reporter.log("=====Login to Appl=====", true);
+		
 		String Url = System.getProperty("url", flib.getDataFromPropertiesFile("url"));
 		String Username = System.getProperty("username", flib.getDataFromPropertiesFile("username"));
 		String Password = System.getProperty("password", flib.getDataFromPropertiesFile("password"));
@@ -83,7 +82,7 @@ public class BaseClass {
 //		lp.getLogin().click();
 		
 		lp.loginToApp1(Url, Username, Password);
-		
+		Reporter.log("=====Login to Appl=====", true);
 		
 	}
 
@@ -99,8 +98,9 @@ public class BaseClass {
 	
 	@AfterClass(alwaysRun = true)
 	public void ConfigAC() {
-		Reporter.log("=====Close Browser=====", true);
+		
 		driver.quit();
+		Reporter.log("=====Close Browser=====", true);
 	}
 
 	

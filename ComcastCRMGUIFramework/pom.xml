@@ -61,7 +61,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>RT</id>
 			<build>
@@ -79,7 +79,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>SRT</id>
 			<build>
@@ -97,7 +97,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>ST</id>
 			<build>
@@ -115,10 +115,18 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 	</profiles>
 
 	<dependencies>
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.24.3</version>
+		</dependency>
 
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
