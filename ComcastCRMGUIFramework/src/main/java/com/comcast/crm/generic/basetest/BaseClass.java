@@ -21,8 +21,8 @@ import com.comcast.crm.generic.fileUtils.FileUtility;
 import com.comcast.crm.generic.webDriverUtils.JavaUtility;
 import com.comcast.crm.generic.webDriverUtils.UtilityClassObject;
 import com.comcast.crm.generic.webDriverUtils.WebDriverUtility;
-import com.comcast.objectRepositoryUtils.HomePage;
-import com.comcast.objectRepositoryUtils.LoginPage;
+import com.comcast.crm.objectRepositoryUtils.HomePage;
+import com.comcast.crm.objectRepositoryUtils.LoginPage;
 
 /**
  * @author Shashank

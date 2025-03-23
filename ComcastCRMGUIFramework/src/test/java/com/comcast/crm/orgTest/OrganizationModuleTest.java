@@ -8,10 +8,10 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.Status;
 import com.comcast.crm.generic.basetest.BaseClass;
 import com.comcast.crm.generic.webDriverUtils.UtilityClassObject;
-import com.comcast.objectRepositoryUtils.HomePage;
-import com.comcast.objectRepositoryUtils.OrganizationCreateNewPage;
-import com.comcast.objectRepositoryUtils.OrganizationInfoPage;
-import com.comcast.objectRepositoryUtils.OrganizationPage;
+import com.comcast.crm.objectRepositoryUtils.HomePage;
+import com.comcast.crm.objectRepositoryUtils.OrganizationCreateNewPage;
+import com.comcast.crm.objectRepositoryUtils.OrganizationInfoPage;
+import com.comcast.crm.objectRepositoryUtils.OrganizationPage;
 
 /**
  * @author Shashank

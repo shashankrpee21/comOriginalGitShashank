@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import com.comcast.crm.generic.basetest.BaseClass;
 import com.comcast.crm.generic.webDriverUtils.UtilityClassObject;
-import com.comcast.objectRepositoryUtils.HomePage;
-import com.comcast.objectRepositoryUtils.PriceBooksCreatePage;
-import com.comcast.objectRepositoryUtils.PriceBooksInfoPage;
-import com.comcast.objectRepositoryUtils.PriceBooksPage;
-import com.comcast.objectRepositoryUtils.VendorCreatePage;
-import com.comcast.objectRepositoryUtils.VendorInfoPage;
-import com.comcast.objectRepositoryUtils.VendorPage;
+import com.comcast.crm.objectRepositoryUtils.HomePage;
+import com.comcast.crm.objectRepositoryUtils.PriceBooksCreatePage;
+import com.comcast.crm.objectRepositoryUtils.PriceBooksInfoPage;
+import com.comcast.crm.objectRepositoryUtils.PriceBooksPage;
+import com.comcast.crm.objectRepositoryUtils.VendorCreatePage;
+import com.comcast.crm.objectRepositoryUtils.VendorInfoPage;
+import com.comcast.crm.objectRepositoryUtils.VendorPage;
 
 /**
  * @author Shashank

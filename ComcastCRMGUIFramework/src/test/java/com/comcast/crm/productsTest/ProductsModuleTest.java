@@ -9,18 +9,18 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.Status;
 import com.comcast.crm.generic.basetest.BaseClass;
 import com.comcast.crm.generic.webDriverUtils.UtilityClassObject;
-import com.comcast.objectRepositoryUtils.ContactCreatePage;
-import com.comcast.objectRepositoryUtils.ContactInfoPage;
-import com.comcast.objectRepositoryUtils.HomePage;
-import com.comcast.objectRepositoryUtils.ProductsCreatePage;
-import com.comcast.objectRepositoryUtils.ProductsInfoPage;
-import com.comcast.objectRepositoryUtils.ProductsPage;
-import com.comcast.objectRepositoryUtils.PurchaseOrderCreatePage;
-import com.comcast.objectRepositoryUtils.PurchaseOrderInfoPage;
-import com.comcast.objectRepositoryUtils.PurchaseOrderPage;
-import com.comcast.objectRepositoryUtils.VendorCreatePage;
-import com.comcast.objectRepositoryUtils.VendorInfoPage;
-import com.comcast.objectRepositoryUtils.VendorPage;
+import com.comcast.crm.objectRepositoryUtils.ContactCreatePage;
+import com.comcast.crm.objectRepositoryUtils.ContactInfoPage;
+import com.comcast.crm.objectRepositoryUtils.HomePage;
+import com.comcast.crm.objectRepositoryUtils.ProductsCreatePage;
+import com.comcast.crm.objectRepositoryUtils.ProductsInfoPage;
+import com.comcast.crm.objectRepositoryUtils.ProductsPage;
+import com.comcast.crm.objectRepositoryUtils.PurchaseOrderCreatePage;
+import com.comcast.crm.objectRepositoryUtils.PurchaseOrderInfoPage;
+import com.comcast.crm.objectRepositoryUtils.PurchaseOrderPage;
+import com.comcast.crm.objectRepositoryUtils.VendorCreatePage;
+import com.comcast.crm.objectRepositoryUtils.VendorInfoPage;
+import com.comcast.crm.objectRepositoryUtils.VendorPage;
 
 /**
  * @author Shashank

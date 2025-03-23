@@ -9,15 +9,15 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.Status;
 import com.comcast.crm.generic.basetest.BaseClass;
 import com.comcast.crm.generic.webDriverUtils.UtilityClassObject;
-import com.comcast.objectRepositoryUtils.CalenderCreatePage;
-import com.comcast.objectRepositoryUtils.CalenderPage;
-import com.comcast.objectRepositoryUtils.CampaignsCreatePage;
-import com.comcast.objectRepositoryUtils.CampaignsInfoPage;
-import com.comcast.objectRepositoryUtils.CampaignsPage;
-import com.comcast.objectRepositoryUtils.HomePage;
-import com.comcast.objectRepositoryUtils.ProductsCreatePage;
-import com.comcast.objectRepositoryUtils.ProductsInfoPage;
-import com.comcast.objectRepositoryUtils.ProductsPage;
+import com.comcast.crm.objectRepositoryUtils.CalenderCreatePage;
+import com.comcast.crm.objectRepositoryUtils.CalenderPage;
+import com.comcast.crm.objectRepositoryUtils.CampaignsCreatePage;
+import com.comcast.crm.objectRepositoryUtils.CampaignsInfoPage;
+import com.comcast.crm.objectRepositoryUtils.CampaignsPage;
+import com.comcast.crm.objectRepositoryUtils.HomePage;
+import com.comcast.crm.objectRepositoryUtils.ProductsCreatePage;
+import com.comcast.crm.objectRepositoryUtils.ProductsInfoPage;
+import com.comcast.crm.objectRepositoryUtils.ProductsPage;
 
 /**
  * @author Shashank

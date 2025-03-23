@@ -1,4 +1,4 @@
-package com.comcast.objectRepositoryUtils;
+package com.comcast.crm.objectRepositoryUtils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
