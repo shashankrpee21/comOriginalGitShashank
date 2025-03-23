@@ -106,15 +106,6 @@ public class WebDriverUtility {
 		wait.until(ExpectedConditions.textToBePresentInElement(ele, text));
 	}
 
-	// fluent Wait
-
-//	public void fluentWait(WebDriver driver, WebElement ele) {
-//
-//		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(20))
-//				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchMethodException.class);
-//
-//	}
-
 	// Open Empty Window
 	public void openNewEmptyTab(WebDriver driver) {
 		driver.switchTo().newWindow(WindowType.TAB);

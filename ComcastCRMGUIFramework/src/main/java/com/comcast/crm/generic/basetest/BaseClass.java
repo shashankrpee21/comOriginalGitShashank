@@ -47,9 +47,6 @@ public class BaseClass {
 	}
 
 	
-
-	
-	
 // Only Use @parameter for Cross Browser testing	
 //	@Parameters("Browser")
 //	@BeforeClass(groups = {"smokeTest","regressionTest"})
@@ -61,17 +58,11 @@ public class BaseClass {
 		
 		
 		Reporter.log("=====Launch Browse=====", true);
-//		commented the below line because receiving the Data from CMD line instead of properties file
-//		String Browser = flib.getDataFromPropertiesFile("browser");
-		
-//		It will receive the data from CMD line  - "browser", If user forgot 
-//		to give the data, it will be received from properties file - "flib.getDataFromPropertiesFile("browser")" by default	
 		String Browser = System.getProperty("browser", flib.getDataFromPropertiesFile("browser"));
 
 //		ChromeOptions option1 = new ChromeOptions();
-//		//option.addArguments("--headless");
+//		option.addArguments("--headless");
 //		option1.addArguments("--Incognito");
-		
 //		FirefoxOptions option2 = new FirefoxOptions();
 //		option2.addArguments("-private");
 		
@@ -84,11 +75,8 @@ public class BaseClass {
 		} else {
 			Reporter.log("Browser not recognised --- Shashank");
 		}
-		//storing the sessionID into staticDriver which will be used in ListenerImlementationClass-> OnFailureTest() or OnFinishTest()
 		staticDriver = driver;		
-		//
 		UtilityClassObject.setDriver(driver);
-		
 	}
 	
 			
