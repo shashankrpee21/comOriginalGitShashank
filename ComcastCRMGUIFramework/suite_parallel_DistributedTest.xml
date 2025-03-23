@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Parallel-Distributed Suite">
+	
+	<test name="Test-1">
+		<classes>
+			<class name="com.comcast.crm.campaignTest.CampaignModuleTest" />
+			<class name="com.comcast.crm.contactTest.ContactModuleTest" />
+			<class name="com.comcast.crm.leadsTest.LeadsModuleTest" />
+			<class name="com.comcast.crm.orgTest.OrganizationModuleTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test-2">
+		<classes>
+			<class name="com.comcast.crm.priceBooksTest.PriceBooksModuleTest" />
+			<class name="com.comcast.crm.productsTest.ProductsModuleTest" />
+			<class name="com.comcast.crm.purchaseOrderTest.PurchaseOrderModuleTest" />
+			<class name="com.comcast.crm.vendorTest.VendorModuleTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
