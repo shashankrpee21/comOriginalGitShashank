@@ -23,7 +23,7 @@ import com.comcast.crm.objectRepositoryUtils.ProductsPage;
  * @author Shashank
  */
 
-//@Listeners(com.comcast.crm.generic.listenerUtils.ListenerImplementationClass.class)
+@Listeners(com.comcast.crm.generic.listenerUtils.ListenerImplementationClass.class)
 public class CampaignModuleTest extends BaseClass {
 
 	@Test(groups = "smokeTest")
@@ -230,9 +230,10 @@ public class CampaignModuleTest extends BaseClass {
 		cpp.creatingEventInfo(eventTypeDD, eventName, descriptionTA, locationTF);
 		cpp.startEvent(eventStartHrDD, eventStartMinDD, eventStartFmtDD);		
 		cpp.getEventStartDateTF().clear();
-		String startDate = jlib.getSystemDateYYYYMMDD();
+		String startDate = jlib.getRequiredDateYYYYMMDD(1);
 		cpp.getEventStartDateTF().sendKeys(startDate);
 		cpp.endEvent(eventEndHrDD, eventEndMinDD, eventEndFmtDD);
+		cpp.getEventEndDateTF().clear();
 		cpp.getEventEndDateTF().clear();
 		String endDate = jlib.getRequiredDateYYYYMMDD(15);
 		cpp.getEventEndDateTF().sendKeys(endDate);

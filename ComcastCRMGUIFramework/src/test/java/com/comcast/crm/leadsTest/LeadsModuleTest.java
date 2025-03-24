@@ -17,7 +17,7 @@ import com.comcast.crm.objectRepositoryUtils.LeadsPage;
  * @author Shashank
  */
 
-//@Listeners(com.comcast.crm.generic.listenerUtils.ListenerImplementationClass.class)
+@Listeners(com.comcast.crm.generic.listenerUtils.ListenerImplementationClass.class)
 public class LeadsModuleTest extends BaseClass{
 
 	@Test (groups = "smokeTest")

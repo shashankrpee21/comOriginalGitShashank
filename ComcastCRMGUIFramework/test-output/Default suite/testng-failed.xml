@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.comcast.crm.productsTest.CreateProductsTest">
+      <class name="com.comcast.crm.leadsTest.LeadsModuleTest">
         <methods>
           <include name="ConfigAC"/>
           <include name="ConfigAs"/>
+          <include name="createLeadTest"/>
           <include name="ConfigAM"/>
           <include name="configBM"/>
-          <include name="createProductsWithVendorAndContactAndPurchaseOrderTest"/>
           <include name="configBC"/>
           <include name="configBS"/>
         </methods>
-      </class> <!-- com.comcast.crm.productsTest.CreateProductsTest -->
+      </class> <!-- com.comcast.crm.leadsTest.LeadsModuleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
