@@ -1,4 +1,4 @@
-package com.comcast.crm.puchaseOrderTest;
+package com.comcast.crm.purchaseOrderTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
